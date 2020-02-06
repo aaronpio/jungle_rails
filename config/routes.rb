@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   root to: 'products#index'
 
   get "/about" => "about#show"
+  get "/admin/categories" => "admin/categories#index"
+  get "/admin/categories/new" => "admin/categories#new"
+  post "/admin/categories" => "admin/categories#create"
+
 
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
