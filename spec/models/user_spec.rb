@@ -40,5 +40,15 @@ RSpec.describe User, type: :model do
     end
 
   end
+
+  describe '.authenticate_with_credentials' do
+    mock_user = User.new(name: "Joe", email: "joe@hi.com", password: "12345", password_confirmation: "12345")
+
+    it 'should still authenticate with spaces and capitals' do
+      mock_user.save
+      expect(User.authenticate_with_credentials("  JoE@hi.com ", "12345")).not_to be_nil
+    end
+
+  end
     
 end
