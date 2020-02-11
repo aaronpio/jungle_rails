@@ -6,7 +6,7 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
   before :each do
     @category = Category.create! name: 'Apparel'
 
-    10.times do |n|
+    1.times do |n|
       @category.products.create!(
         name:  Faker::Hipster.sentence(3),
         description: Faker::Hipster.paragraph(4),
@@ -17,17 +17,23 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
     end
   end
 
-  scenario "Clicks product and goes to product-detail page" do
+  scenario "Clicks add to cart and increase number to (1)" do
     # ACT
     visit root_path
 
-    # VERIFY
-    expect(page).to have_css 'article.product', count: 10
+    expect(page).to have_css 'article.product', count: 1
 
-    first(".btn-default").click
-    
-    expect(page).to have_css '.product-detail'
-    save_screenshot "product-page.jpg"
+    sleep(2)
+    click_button 'Add'
+    sleep(1)
+
+    save_screenshot "cart-num.jpg"
+
+    within 'nav' do 
+
+      expect(page).to have_text(' (1)')
+
+    end
 
   end
 end
