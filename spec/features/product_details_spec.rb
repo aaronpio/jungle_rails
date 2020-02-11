@@ -17,14 +17,16 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
     end
   end
 
-  scenario "They see all products" do
+  scenario "Clicks product and goes to product-detail page" do
     # ACT
     visit root_path
 
-    # DEBUG
-    save_screenshot 'home.jpg'
-
     # VERIFY
     expect(page).to have_css 'article.product', count: 10
+
+    first(".btn-default").click
+    expect(page).to have_css '.product-detail'
+    save_screenshot "product-page.jpg"
+
   end
 end
