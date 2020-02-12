@@ -12,7 +12,11 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Admin Privileges
 
-### Create Categories and Products
+### Create Categories
+
+![Alt Text](https://j.gifs.com/717798.gif)
+
+### Create Products
 
 ![Alt Text](https://j.gifs.com/q7XXQD.gif)
 
