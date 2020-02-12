@@ -4,7 +4,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Browse Products
 
-![Alt Text](https://j.gifs.com/ROrrg0.gif)
+![Alt Text](https://j.gifs.com/P7ppz2.gif)
 
 ## Checkout With Swipe Payment
 
