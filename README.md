@@ -2,6 +2,25 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Browse Products
+
+![Alt Text](https://j.gifs.com/ROrrg0.gif)
+
+## Checkout With Swipe Payment
+
+![Alt Text](https://j.gifs.com/4QDDzk.gif)
+![Alt Text](https://j.gifs.com/9177DY.gif)
+
+## Admin Privileges
+
+### Create Categories
+
+![Alt Text](https://j.gifs.com/717798.gif)
+
+### Create Products
+
+![Alt Text](https://j.gifs.com/q7XXQD.gif)
+
 ## Setup
 
 1. Run `bundle install` to install dependencies
